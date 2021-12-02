@@ -13,7 +13,7 @@ course_data = position_data[['direction', 'units']].groupby(['direction']).sum()
 final_depth = course_data.loc['down', 'units'] - course_data.loc['up', 'units']
 final_horizontal = course_data.loc['forward', 'units']
 
-print(f'Answer is {final_depth*final_horizontal}')  # Answer is 1427868
+print(f'Answer is {final_depth * final_horizontal}')  # Answer is 1427868
 
 
 # Part Two
@@ -32,7 +32,4 @@ for row in range(position_data.shape[0]):
     else:
         raise ValueError('Invalid direction.')
 
-    print(position_data.loc[row, 'direction'])
-    print(position_data.loc[row, 'units'])
-
-print(f'Answer is {depth*horizontal_position}')  # Answer is 616102668
+print(f'Answer is {depth * horizontal_position}')  # Answer is 1568138742
